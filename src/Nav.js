@@ -3,26 +3,26 @@ import logo from "./Images/Logo.svg";
 
 function Nav() {
   return (
-    <nav>
+    <nav class="nav-container">
       <img src={logo} alt="Little Lemon Logo" />
       <ul>
         <li>
           <a href="">Home</a>
         </li>
         <li>
-          <a href="">About</a>
+          <a>About</a>
         </li>
         <li>
-          <a href="">Menu</a>
+          <a>Menu</a>
         </li>
         <li>
           <a href="">Reservations</a>
         </li>
         <li>
-          <a href="">Order Online</a>
+          <a>Order Online</a>
         </li>
         <li>
-          <a href="">Login</a>
+          <a>Login</a>
         </li>
       </ul>
     </nav>

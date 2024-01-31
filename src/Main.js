@@ -2,7 +2,7 @@ import React from "react";
 
 function Main() {
   return (
-    <main>
+    <main class="main-container">
       <h4>This is Main</h4>
     </main>
   );
