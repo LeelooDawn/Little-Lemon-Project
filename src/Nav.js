@@ -5,24 +5,28 @@ function Nav() {
   return (
     <nav class="nav-container">
       <img src={logo} alt="Little Lemon Logo" />
-      <ul>
+      <ul class="nav-list">
         <li>
-          <a href="">Home</a>
+          <a href="" class="nav-link">
+            HOME
+          </a>
         </li>
         <li>
-          <a>About</a>
+          <a>ABOUT</a>
         </li>
         <li>
-          <a>Menu</a>
+          <a>MENU</a>
         </li>
         <li>
-          <a href="">Reservations</a>
+          <a href="" class="nav-link">
+            RESERVATIONS
+          </a>
         </li>
         <li>
-          <a>Order Online</a>
+          <a>ORDER ONLINE</a>
         </li>
         <li>
-          <a>Login</a>
+          <a>LOGIN</a>
         </li>
       </ul>
     </nav>

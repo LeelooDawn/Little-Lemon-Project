@@ -3,6 +3,11 @@
   src: url("./assets/KarlaTwo.ttf");
 }
 
+@font-face {
+  font-family: "Markazi";
+  src: url("./assets/Markazi.ttf");
+}
+
 body {
   font-family: "Karla", sans-serif;
 }
@@ -20,14 +25,107 @@ ul {
   margin-left: 75px;
 }
 
+.nav-list {
+  font-weight: bold;
+  font-family: "Karla";
+  font-size: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link:hover {
+  color: #f4ce14;
+}
+
+.header1 {
+  color: #f4ce14;
+  font-size: 64px;
+  grid-area: a;
+  font-family: "Markazi";
+}
+.header2 {
+  grid-area: c;
+  font-family: "Markazi";
+  font-size: 40px;
+  align-items: start;
+}
+.headerP {
+  grid-area: d;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.headerbutton {
+  border: none;
+  border-radius: 16px;
+  background-color: #f4ce14;
+  color: black;
+  grid-area: e;
+  align-self: center;
+  justify-self: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.headimage {
+  grid-area: b;
+  justify-content: center;
+}
+
 .header-container {
   display: grid;
+  grid-template-columns: 1fr 400px 100px 1fr;
+  grid-template-rows: repeat(4, 100px);
+  grid-template-areas:
+    ". a b ."
+    ". c b ."
+    ". d b ."
+    ". e b .";
+  background-color: #495e57;
+  color: white;
 }
 
 .main-container {
   display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  align-content: center;
+  justify-content: center;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 200px 100px 200px 100px;
+  background-color: #edefee;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card p {
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.card footer {
+  text-align: center;
+}
 .footer-container {
   display: grid;
+  background-color: #495e57;
+  color: white;
 }
