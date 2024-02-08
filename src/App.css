@@ -94,35 +94,75 @@ ul {
   align-content: center;
   justify-content: center;
 }
+.menu {
+  margin-top: 100px;
+}
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   grid-gap: 20px;
 }
 
 .card {
   display: grid;
-  grid-template-rows: 200px 100px 200px 100px;
+  grid-template-rows: 200px 100px 130px 100px;
   background-color: #edefee;
   border-radius: 16px;
-  font-size: 18px;
-  font-weight: bold;
+  justify-self: center;
+  align-self: center;
 }
 
+.card header {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: space-between;
+  padding: 20px;
+}
 .card img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  border-radius: 16px;
 }
 
-.card p {
+.content {
   font-size: 16px;
-  font-weight: lighter;
+  text-align: center;
+  line-height: 1.5;
+  padding: 5px;
 }
 
 .card footer {
   text-align: center;
+  font-weight: bold;
+}
+.testimonials {
+  background-color: #495e57;
+}
+
+.testimonial-headline {
+  color: #f4ce14;
+  font-family: "Markazi";
+  font-size: 64px;
+  text-align: center;
+}
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reviews div {
+  background-color: #ee9972;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  height: 155px;
+  width: 225px;
+  margin: 30px;
+  border-radius: 16px;
+  padding: 10px;
 }
 .footer-container {
   display: grid;
