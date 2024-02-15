@@ -1,16 +1,22 @@
 import React from "react";
 import "./App.css";
-import Nav from "./Nav";
-import Header from "./Header";
-import Main from "./Main";
+import Nav from "./components/NavBar/Nav";
+import Header from "./HeaderHeader";
+import Testimonials from "./components/Testimonials/Testimonials";
+import About from "./components/About/About";
+import Specials from "./components/Specials/Specials";
 import Footer from "./Footer";
 
 function App() {
   return (
     <>
       <Nav />
-      <Header />
-      <Main />
+      <Routes>
+        <Header />
+        <Specials />
+        <Testimonials />
+        <About />
+      </Routes>
       <Footer />
     </>
   );
