@@ -1,10 +1,7 @@
-import React from "react";
+import { Routes, Route } from "react.router.dom";
 import "./App.css";
 import Nav from "./components/NavBar/Nav";
-import Header from "./components/Hero/Header";
-import Testimonials from "./components/Testimonials/Testimonials";
-import About from "./components/About/About";
-import Specials from "./components/Specials/Specials";
+import Homepage from "./pages/Homepage";
 import Footer from "./Footer";
 
 function App() {
@@ -12,10 +9,7 @@ function App() {
     <>
       <Nav />
       <Routes>
-        <Header />
-        <Specials />
-        <Testimonials />
-        <About />
+        <Route path="/" element={<Homepage />} />
       </Routes>
       <Footer />
     </>

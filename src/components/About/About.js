@@ -4,8 +4,8 @@ import adrian from "./Images/Mario and Adrian b.jpg";
 
 function About() {
   return (
-    <div class="container">
-      <div class="about">
+    <div className="container">
+      <div className="about">
         <h2>Little Lemon</h2>
         <h3>Chicago</h3>
         <p>
@@ -14,7 +14,7 @@ function About() {
           They wanted to share their love with their community
         </p>
       </div>
-      <div class="chef-images">
+      <div className="chef-images">
         <img
           src={mario}
           alt="Mario and Adrian picking out spices"
