@@ -4,7 +4,7 @@ import adrian from "./Images/Mario and Adrian b.jpg";
 
 function About() {
   return (
-    <div>
+    <div class="container">
       <div class="about">
         <h2>Little Lemon</h2>
         <h3>Chicago</h3>
@@ -25,3 +25,4 @@ function About() {
     </div>
   );
 }
+export default About;

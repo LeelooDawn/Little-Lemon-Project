@@ -1,0 +1,43 @@
+.container {
+  grid-column: 3 / 11;
+  grid-row: 2;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+}
+
+.chef-images {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-column: 1 / 13;
+    padding: 32px;
+  }
+  .about {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .chef-images {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    grid-column: 1 / 13;
+    padding: 16px;
+  }
+  .about {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .chef-images {
+    display: none;
+  }
+}

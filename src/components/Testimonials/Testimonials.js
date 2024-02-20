@@ -34,4 +34,4 @@ function Testimonials() {
   );
 }
 
-export default Main;
+export default Testimonials;

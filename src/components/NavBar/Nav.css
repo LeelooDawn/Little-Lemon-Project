@@ -1,0 +1,39 @@
+.nav-container {
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  margin: 25px auto;
+  margin-left: 75px;
+}
+
+.nav-list {
+  font-weight: bold;
+  font-family: "Karla";
+  font-size: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link:hover {
+  color: #f4ce14;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    grid-column: 1 / 13;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  nav {
+    grid-column: 1 / 13;
+  }
+  nav ul {
+    display: none;
+  }
+}
