@@ -1,6 +1,7 @@
 import React from "react";
-import mario from "./Images/Mario and Adrian A.jpg";
-import adrian from "./Images/Mario and Adrian b.jpg";
+import "./About.css";
+import mario from "../../images/Mario and Adrian A.jpg";
+import adrian from "../../images/Mario and Adrian b.jpg";
 
 function About() {
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Footer.css";
 
 function Footer() {
   return (
@@ -17,22 +18,22 @@ function Footer() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a>About</a>
+              <a href="#">About</a>
             </li>
             <li>
-              <a>Order Online</a>
+              <a href="#">Order Online</a>
             </li>
             <li>
               <a href="#">Reserve a Table</a>
             </li>
             <li>
-              <a>Login</a>
+              <a href="#">Login</a>
             </li>
             <li>
-              <a>Facebook</a>
+              <a href="#">Facebook</a>
             </li>
             <li>
-              <a>Instagram</a>
+              <a href="#">Instagram</a>
             </li>
           </ul>
         </div>

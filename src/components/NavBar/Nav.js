@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "./Images/Logo.svg";
+import "./Nav.css";
+import logo from "../../images/Logo.svg";
 
 function Nav() {
   return (
@@ -8,26 +9,34 @@ function Nav() {
         <img src={logo} alt="Little Lemon Logo" />
         <ul className="nav-list">
           <li>
-            <a href="" className="nav-link">
+            <a href="/" className="nav-link">
               HOME
             </a>
           </li>
           <li>
-            <a>ABOUT</a>
+            <a href="#" className="nav-link">
+              ABOUT
+            </a>
           </li>
           <li>
-            <a>MENU</a>
+            <a href="#" className="nav-link">
+              MENU
+            </a>
           </li>
           <li>
-            <a href="" className="nav-link">
+            <a href="#" className="nav-link">
               RESERVATIONS
             </a>
           </li>
           <li>
-            <a>ORDER ONLINE</a>
+            <a href="#" className="nav-link">
+              ORDER ONLINE
+            </a>
           </li>
           <li>
-            <a>LOGIN</a>
+            <a href="#" className="nav-link">
+              LOGIN
+            </a>
           </li>
         </ul>
       </nav>

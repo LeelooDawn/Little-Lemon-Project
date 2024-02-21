@@ -1,47 +1,75 @@
-.header1 {
-  color: #f4ce14;
-  font-size: 64px;
-  grid-area: a;
-  font-family: "Markazi";
-}
-.header2 {
-  grid-area: c;
-  font-family: "Markazi";
-  font-size: 40px;
-  align-items: start;
-}
-.headerP {
-  grid-area: d;
-  font-size: 16px;
-  line-height: 1.5;
+.header-background {
+  background-color: #495e57;
 }
 
-.headerbutton {
-  border: none;
-  border-radius: 16px;
-  background-color: #f4ce14;
-  color: black;
-  grid-area: e;
-  align-self: center;
-  justify-self: center;
-  padding: 10px;
-  font-weight: bold;
-}
-
-.headimage {
-  grid-area: b;
-  justify-content: center;
+header {
+  grid-column: 3 / 11;
+  grid-row: 2;
+  padding-top: 70px;
 }
 
 .header-container {
   display: grid;
-  grid-template-columns: 1fr 400px 100px 1fr;
-  grid-template-rows: repeat(4, 100px);
-  grid-template-areas:
-    ". a b ."
-    ". c b ."
-    ". d b ."
-    ". e b .";
-  background-color: #495e57;
+  grid-template-columns: 1fr 1fr;
+}
+
+header h1 {
+  color: #f4ce14;
+}
+
+header h2 {
   color: white;
+}
+
+header p {
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.header-left {
+  padding: 2.5rem 0 2.5rem 0;
+}
+
+.header-right {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-button {
+  width: 50%;
+  transition-duration: 0.4s;
+}
+
+.header-button:hover {
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    grid-column: 1 / 13;
+    padding: 70px 32px 32px 32px;
+  }
+  .header-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .header-right {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  header {
+    grid-column: 1 / 13;
+    padding: 70px 16px 16px 16px;
+  }
+  .header-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

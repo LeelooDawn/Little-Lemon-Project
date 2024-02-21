@@ -1,14 +1,27 @@
-.nav-container {
-  display: grid;
-  grid-template-columns: repeat(2, 250px);
-  margin: 25px auto;
-  margin-left: 75px;
+nav {
+  grid-column: 3 / 11;
+  height: 70px;
+  display: flex;
+  align-items: center;
 }
 
-.nav-list {
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3em;
   font-weight: bold;
   font-family: "Karla";
   font-size: 15px;
+}
+
+nav img {
+  margin-right: 3em;
 }
 
 .nav-link {
