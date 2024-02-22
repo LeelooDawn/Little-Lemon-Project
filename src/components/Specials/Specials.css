@@ -1,7 +1,8 @@
 .menu {
   grid-column: 3 / 11;
   grid-row: 2;
-  padding-bottom: 3rem;
+  padding-bottom: 15px;
+  box-sizing: border-box;
 }
 .menu h2 {
   padding: 2.5rem 0 2.5rem 0;
@@ -11,6 +12,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  height: 50%;
 }
 
 .card {
@@ -18,10 +20,12 @@
   border-radius: 16px;
   justify-self: center;
   align-self: center;
+  height: 100%;
 }
 
 .card-content {
   padding: 1rem;
+  height: 100%;
 }
 
 .card header {
@@ -29,7 +33,7 @@
   font-size: 18px;
   font-weight: bold;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   padding: 5px;
 }
 
@@ -40,16 +44,20 @@
 
 .card-content > p {
   color: #495e57;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 .card img {
-  object-fit: cover;
   width: 100%;
   border-radius: 16px;
 }
 
 .price {
   color: black;
+  padding-top: 4px;
+}
+
+.order {
+  margin-top: auto;
 }
 
 @media only screen and (min-width: 1024px) {
