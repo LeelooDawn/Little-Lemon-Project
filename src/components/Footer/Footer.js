@@ -16,7 +16,7 @@ function Footer() {
         <footer>
           <div className="footer-grid">
             <div>
-              <ul>
+              <ul className="contact">
                 <li>Contact Info</li>
                 <li>Phone Number: 312 - 555 - 4697</li>
                 <li>Email: LittleLemon@Lemon.com</li>
@@ -30,6 +30,7 @@ function Footer() {
                     onClick={() => {
                       scrollTo("#header");
                     }}
+                    className="foot-link"
                   >
                     <p>Home</p>
                   </Link>
@@ -40,6 +41,7 @@ function Footer() {
                     onClick={() => {
                       scrollTo("#about");
                     }}
+                    className="foot-link"
                   >
                     <p>About</p>
                   </Link>
@@ -49,6 +51,7 @@ function Footer() {
                   onClick={() => {
                     scrollTo("#Testimonials");
                   }}
+                  className="foot-link"
                 >
                   <p>Testimonials</p>
                 </Link>
@@ -58,14 +61,17 @@ function Footer() {
                     onClick={() => {
                       scrollTo("#header");
                     }}
+                    className="foot-link"
                   >
                     <p>Reserve a Table</p>
                   </Link>
                 </li>
-                <li>
-                  <FontAwesomeIcon icon={faCamera} color="#f4ce14" />
-                </li>
               </ul>
+            </div>
+            <div>
+              <a href="www.instagram.com" className="foot-link">
+                <FontAwesomeIcon icon={faCamera} color="#f4ce14" size="lg" />
+              </a>
             </div>
           </div>
         </footer>
