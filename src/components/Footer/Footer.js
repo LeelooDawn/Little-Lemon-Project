@@ -49,7 +49,7 @@ function Footer() {
                 <Link
                   to="/"
                   onClick={() => {
-                    scrollTo("#Testimonials");
+                    scrollTo("#testimonials");
                   }}
                   className="foot-link"
                 >

@@ -41,6 +41,7 @@ header p {
 .header-button {
   width: 50%;
   transition-duration: 0.4s;
+  font-weight: bold;
 }
 
 .header-button:hover {
