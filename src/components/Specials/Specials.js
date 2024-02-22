@@ -11,7 +11,7 @@ const icon = <FontAwesomeIcon icon={faCar} />;
 function Specials() {
   return (
     <div className="container">
-      <div className="menu">
+      <div className="menu" id="specials">
         <h2>This Weeks Specials</h2>
         <div className="cards">
           <article className="card">

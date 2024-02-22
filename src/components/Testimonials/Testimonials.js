@@ -9,7 +9,7 @@ function Testimonials() {
   return (
     <div className="testimonials-background">
       <div className="container">
-        <div className="testimonials">
+        <div className="testimonials" id="testimonials">
           <h2 className="testimonial-headline">Testimonials</h2>
           <div className="reviews-grid">
             <div className="review">

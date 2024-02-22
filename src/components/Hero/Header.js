@@ -6,7 +6,7 @@ function Header() {
   return (
     <div className="header-background">
       <div className="container">
-        <header>
+        <header id="header">
           <div className="header-container">
             <div className="header-left">
               <h1>Little Lemon</h1>
