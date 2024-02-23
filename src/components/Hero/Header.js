@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Header.css";
 import headimage from "../../images/restauranfood.jpg";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/booking");
+  };
+
+  useEffect(() => {
+    const bookingSection = document.getElementById("booking");
+    if (bookingSection) {
+      bookingSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   return (
     <div className="header-background">
       <div className="container">
@@ -16,7 +31,13 @@ function Header() {
                 Street in Chicago, we focus on traditional recipes and serve
                 them with a modern twist!{" "}
               </p>
-              <button className="header-button">Reserve a Table</button>
+              <button
+                className="header-button"
+                onClick={handleSubmit}
+                aria-label="Reserve a Table"
+              >
+                Reserve a Table
+              </button>
             </div>
             <div className="header-right">
               <img
