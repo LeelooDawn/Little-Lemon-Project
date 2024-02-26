@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import "./Style/Bookingform.css";
+import { submitAPI } from "../../API";
+import BookingConfirmation from "./BookingConfirmation";
 
-function BookingForm() {
+function BookingForm({ dispatch, state }) {
   const [reservationDate, setReservationDate] = useState("");
   const [reservationTime, setReservationTime] = useState("17:00");
   const [numberOfGuests, setNumberOfGuests] = useState(1);
@@ -16,10 +18,14 @@ function BookingForm() {
       res_guests: numberOfGuests,
       res_occasion: occasion,
     };
+    const submit = submitAPI(reservation);
+    if (submit === true) {
+    }
   };
 
   function handleDateChange(e) {
     setReservationDate(e.target.value);
+    dispatch({ type: "update_times", selectedDate: e.target.value });
   }
 
   const handleGuests = (e) => {
@@ -35,7 +41,7 @@ function BookingForm() {
         id="res-date"
         value={reservationDate}
         onChange={handleDateChange}
-        aria-label="Enter Reservation Date"
+        aria-label="Enter Reservation Date mm/dd/yyyy"
         required
       />
       <label htmlFor="res-time">Choose time</label>
@@ -73,8 +79,8 @@ function BookingForm() {
         }}
         aria-label="Select an Occasion"
       >
-        <option>Birthday</option>
-        <option>Anniversary</option>
+        <option aria-label="Birthday">Birthday</option>
+        <option aria-label="Anniversary">Anniversary</option>
       </select>
       <input
         type="submit"
