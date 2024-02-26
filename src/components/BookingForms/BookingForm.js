@@ -1,10 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import "./Style/Bookingform.css";
-import { submitAPI } from "../../API";
-import BookingConfirmation from "./BookingConfirmation";
 
-function BookingForm({ dispatch, state }) {
+function BookingForm({ dispatch, state, onSubmit }) {
   const [reservationDate, setReservationDate] = useState("");
   const [reservationTime, setReservationTime] = useState("17:00");
   const [numberOfGuests, setNumberOfGuests] = useState(1);
@@ -12,15 +10,14 @@ function BookingForm({ dispatch, state }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const reservation = {
+    const reservationData = {
       res_date: reservationDate,
       res_time: reservationTime,
-      res_guests: numberOfGuests,
-      res_occasion: occasion,
+      guests: numberOfGuests,
+      occasion: occasion,
     };
-    const submit = submitAPI(reservation);
-    if (submit === true) {
-    }
+    console.log(reservationData);
+    onSubmit(reservationData);
   };
 
   function handleDateChange(e) {
@@ -85,13 +82,7 @@ function BookingForm({ dispatch, state }) {
       <input
         type="submit"
         className="submit-button"
-        style={
-          !reservationDate
-            ? { backgroundColor: "#d9d9d9" }
-            : { backgroundColor: "#f4ce14" }
-        }
         value="Make Your reservation"
-        disabled={!reservationDate}
         aria-label="Submit your reservation"
       />
     </form>

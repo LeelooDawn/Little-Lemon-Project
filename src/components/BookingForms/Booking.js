@@ -1,8 +1,8 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import BookingForm from "./BookingForm";
-import BookingConfirmation from "./BookingConfirmation";
+import Confirmation from "./BookingConfirmation";
 import "./Style/Booking.css";
-import { fetchAPI } from "../../API";
+import { fetchAPI, submitAPI } from "../../API";
 
 const times = (state, action) => {
   switch (action.type) {
@@ -29,16 +29,33 @@ export function initializeTimes() {
 
 function Booking() {
   const [state, dispatch] = useReducer(times, initializeTimes());
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [reservationData, setReservationData] = useState(null);
+
+  const handleFormSubmit = (data) => {
+    const submit = submitAPI(data);
+    if (submit === true) {
+      setFormSubmitted(true);
+      setReservationData(data);
+    }
+  };
+
   return (
     <div className="container">
       <div className="booking-grid" id="booking">
         <h2>Dining Reservations</h2>
         <div className="booking-forms">
           <div className="booking-left">
-            <BookingForm dispatch={dispatch} state={state} />
+            <BookingForm
+              dispatch={dispatch}
+              state={state}
+              onSubmit={handleFormSubmit}
+            />
           </div>
           <div className="booking-right">
-            <BookingConfirmation />
+            {formSubmitted && reservationData && (
+              <Confirmation state={reservationData} />
+            )}
           </div>
         </div>
       </div>
