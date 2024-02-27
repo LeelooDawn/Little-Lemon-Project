@@ -3,7 +3,7 @@ import "./Testimonials.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-const icon = <FontAwesomeIcon icon={faStar} />;
+const icon = <FontAwesomeIcon icon={faStar} color="#f4ce14" />;
 
 function Testimonials() {
   return (
@@ -14,11 +14,11 @@ function Testimonials() {
           <div className="reviews-grid">
             <div className="review">
               <div className="stars">
-                <span>{icon}</span>
-                <span>{icon}</span>
-                <span>{icon}</span>
-                <span>{icon}</span>
-                <span>{icon}</span>
+                <span className="icon">{icon}</span>
+                <span className="icon">{icon}</span>
+                <span className="icon">{icon}</span>
+                <span className="icon">{icon}</span>
+                <span className="icon">{icon}</span>
               </div>
               <p>
                 "I love Little Lemon. Especially their Bruchetta, its great! -
@@ -27,11 +27,11 @@ function Testimonials() {
             </div>
             <div className="review">
               <div className="stars">
-                <span>{icon}</span>
-                <span>{icon}</span>
-                <span>{icon}</span>
-                <span>{icon}</span>
-                <span>{icon}</span>
+                <span className="icon">{icon}</span>
+                <span className="icon">{icon}</span>
+                <span className="icon">{icon}</span>
+                <span className="icon">{icon}</span>
+                <span className="icon">{icon}</span>
               </div>
               <p>
                 "I had my birthday at Little Lemon. They provided the best Lemon
@@ -40,11 +40,11 @@ function Testimonials() {
             </div>
             <div className="review">
               <div className="stars">
-                <span>{icon}</span>
-                <span>{icon}</span>
-                <span>{icon}</span>
-                <span>{icon}</span>
-                <span>{icon}</span>
+                <span className="icon">{icon}</span>
+                <span className="icon">{icon}</span>
+                <span className="icon">{icon}</span>
+                <span className="icon">{icon}</span>
+                <span className="icon">{icon}</span>
               </div>
               <p>
                 "Little Lemon is a great weekend night out. They have live music

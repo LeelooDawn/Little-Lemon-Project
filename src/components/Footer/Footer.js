@@ -17,12 +17,18 @@ function Footer() {
           <div className="footer-grid">
             <div>
               <ul className="contact">
-                <li>Contact Info</li>
-                <li>Phone Number: 312 - 555 - 4697</li>
-                <li>Email: LittleLemon@Lemon.com</li>
+                <li style={{ fontWeight: "bold" }}>Contact Info</li>
+                <li>
+                  <span style={{ color: "#f4ce14" }}>Phone Number:</span> 312 -
+                  555 - 4697
+                </li>
+                <li>
+                  <span style={{ color: "#f4ce14" }}>Email:</span>{" "}
+                  Little@Lemon.com
+                </li>
               </ul>
             </div>
-            <div>
+            <div className="links">
               <ul>
                 <li>
                   <Link
@@ -68,10 +74,11 @@ function Footer() {
                 </li>
               </ul>
             </div>
-            <div>
-              <a href="www.instagram.com" className="foot-link">
-                <FontAwesomeIcon icon={faCamera} color="#f4ce14" size="lg" />
+            <div className="insta foot-link">
+              <a href="www.instagram.com">
+                <FontAwesomeIcon icon={faCamera} size="lg" />
               </a>
+              <small style={{ color: "white" }}>Follow Us!</small>
             </div>
           </div>
         </footer>

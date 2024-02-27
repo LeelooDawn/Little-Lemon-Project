@@ -39,6 +39,7 @@ function BookingForm({ dispatch, state, onSubmit }) {
         value={reservationDate}
         onChange={handleDateChange}
         aria-label="Enter Reservation Date mm/dd/yyyy"
+        className="input-box"
         required
       />
       <label htmlFor="res-time">Choose time</label>
@@ -49,6 +50,7 @@ function BookingForm({ dispatch, state, onSubmit }) {
           setReservationTime(e.target.value);
         }}
         aria-label="Select time HH:MM"
+        className="input-box"
         required
       >
         {state?.availableTimes?.map((time) => (
@@ -67,12 +69,14 @@ function BookingForm({ dispatch, state, onSubmit }) {
         value={numberOfGuests}
         onChange={handleGuests}
         aria-label="Enter Number of Guests"
+        className="input-box"
         required
       />
       <label htmlFor="occasion">Occasion</label>
       <select
         id="occasion"
         value={occasion}
+        className="input-box"
         onChange={(e) => {
           setOccasion(e.target.value);
         }}

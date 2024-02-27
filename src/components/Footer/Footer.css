@@ -29,6 +29,19 @@ footer li {
   color: #f4ce14;
 }
 
+.links {
+  justify-self: center;
+}
+.insta {
+  justify-self: end;
+}
+
+.insta small {
+  margin-left: 4px;
+}
+.insta a {
+  color: #f4ce14;
+}
 @media screen and (max-width: 768px) {
   footer {
     grid-column: 1 / 13;

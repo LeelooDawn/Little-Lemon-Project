@@ -3,18 +3,27 @@ import "./Style/Confirmation.css";
 
 function BookingConfirmation({ state }) {
   return (
-    <div className="container">
-      <div className="confirmation-grid">
-        <div className="confirmation">
-          <h3>Booking Confirmed</h3>
-          <p>Date: {state.res_date}</p>
-          <p>Time: {state.res_time}</p>
-          <p>Number of Guests: {state.guests}</p>
-          <p>Special occasion: {state.occasion}</p>
+    <div>
+      <div className="confirmation">
+        <div className="confirm-box">
+          <h3>Booking Confirmed!</h3>
+          <p>
+            <span>Date:</span> {state.res_date}
+          </p>
+          <p>
+            <span>Time:</span> {state.res_time}
+          </p>
+          <p>
+            <span>Number of Guests:</span> {state.guests}
+          </p>
+          <p>
+            <span>Special occasion:</span> {state.occasion}
+          </p>
         </div>
-        <div className="cancellation">
-          Please cancel 12 hours before reservation time. All rights reserved.
-        </div>
+      </div>
+      <div className="cancellation">
+        Please arrive 15 minutes before reservation time. If you have to cancel
+        please cancel 12 hours before reservation time.
       </div>
     </div>
   );
