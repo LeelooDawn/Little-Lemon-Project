@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import App from "./App";
 import {
   initializeTimes,
   updateTimes,
@@ -32,4 +31,36 @@ test("updateTimes", () => {
     "21:00",
     "23:30",
   ]);
+});
+
+describe("BookingForm", () => {
+  test("Renders the Date", () => {
+    render(<BookingForm />);
+    const dateInput = screen.getByLabelText("Choose date");
+    expect(dateInput).toBeInTheDocument();
+    expect(dateInput.getAttribute("type")).toBe("date");
+  });
+
+  test("Renders the Time", () => {
+    render(<BookingForm />);
+    const timeInput = screen.getByLabelText("Choose time");
+    expect(timeInput).toBeInTheDocument();
+    expect(timeInput.getAttribute("id")).toBe("res-time");
+  });
+
+  test("Renders the GUESTS", () => {
+    render(<BookingForm />);
+    const guestsInput = screen.getByLabelText("Number of Guests");
+    expect(guestsInput).toBeInTheDocument();
+    expect(guestsInput.getAttribute("type")).toBe("number");
+    expect(guestsInput.getAttribute("min")).toBe("1");
+    expect(guestsInput.getAttribute("max")).toBe("10");
+  });
+
+  test("Renders the Occasion", () => {
+    render(<BookingForm />);
+    const occasionInput = screen.getByLabelText("Occasion");
+    expect(occasionInput).toBeInTheDocument();
+    expect(occasionInput.getAttribute("id")).toBe("occasion");
+  });
 });
